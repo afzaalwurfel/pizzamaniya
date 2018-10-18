@@ -34,13 +34,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?= base_url('pages/typography')?>'">
+                        <a href="<?= base_url('pages/typography')?>">
                             <i class="material-icons">text_fields</i>
                             <span>Typography</span>
                         </a>
                     </li>
                     <li>
-                        <a href="pages/helper-classes.html">
+                        <a href="<?= base_url('pages/helper-classes')?>"> <!-- modifyed by afzaal -->
                             <i class="material-icons">layers</i>
                             <span>Helper Classes</span>
                         </a>
