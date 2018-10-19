@@ -119,6 +119,38 @@ class HRT_web_controller extends CI_Controller {
 
 
 
+
+	function alerts()
+	{
+		$this->load->view('pages/ui/alerts');
+	}
+
+
+	function helper_classes()
+	{
+		$this->load->view('pages/helper-classes');
+	}
+
+
+	function basic()
+	{
+		$this->load->view('pages/widgets/cards/basic');
+	}
+
+
+	function colored()
+	{
+		$this->load->view('pages/widgets/cards/colored');
+	}
+
+
+	function no_header()
+	{
+		$this->load->view('pages/widgets/cards/no-header');
+	}
+
+
+
 	
 	public function implimenting_criptograpy()
 	{	

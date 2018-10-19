@@ -40,7 +40,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?= base_url('pages/helper-classes')?>"> <!-- modifyed by afzaal -->
+                        <a href="<?= base_url('HRT_web_controller/helper_classes')?>"> <!-- modifyed by afzaal -->
                             <i class="material-icons">layers</i>
                             <span>Helper Classes</span>
                         </a>
@@ -57,13 +57,13 @@
                                 </a>
                                 <ul class="ml-menu">
                                     <li>
-                                        <a href="pages/widgets/cards/basic.html">Basic</a>
+                                        <a href="<?= base_url('HRT_web_controller/basic')?>">Basic</a>
                                     </li>
                                     <li>
-                                        <a href="pages/widgets/cards/colored.html">Colored</a>
+                                        <a href="<?= base_url('HRT_web_controller/colored')?>">Colored</a>
                                     </li>
                                     <li>
-                                        <a href="pages/widgets/cards/no-header.html">No Header</a>
+                                        <a href="<?= base_url('HRT_web_controller/no_header')?>">No Header</a>
                                     </li>
                                 </ul>
                             </li>
@@ -98,7 +98,7 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="<?= base_url('pages/ui/alerts')?>">Alerts</a>
+                                <a href="<?= base_url('HRT_web_controller/alerts')?>">Alerts</a>
                             </li>
                             <li>
                                 <a href="<?= base_url('pages/ui/animations')?>">Animations</a>
