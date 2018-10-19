@@ -112,6 +112,12 @@ class HRT_web_controller extends CI_Controller {
 	}
 
 
+	function pages_typography()
+	{
+		$this->load->view('pages/typography');
+	}
+
+
 
 	
 	public function implimenting_criptograpy()

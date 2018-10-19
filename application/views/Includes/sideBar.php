@@ -34,7 +34,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?= base_url('pages/typography')?>">
+                        <a href="<?= base_url('HRT_web_controller/pages_typography')?>">
                             <i class="material-icons">text_fields</i>
                             <span>Typography</span>
                         </a>
@@ -98,74 +98,74 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="pages/ui/alerts.html">Alerts</a>
+                                <a href="<?= base_url('pages/ui/alerts')?>">Alerts</a>
                             </li>
                             <li>
-                                <a href="pages/ui/animations.html">Animations</a>
+                                <a href="<?= base_url('pages/ui/animations')?>">Animations</a>
                             </li>
                             <li>
-                                <a href="pages/ui/badges.html">Badges</a>
+                                <a href="<?= base_url('pages/ui/badges')?>">Badges</a>
                             </li>
 
                             <li>
-                                <a href="pages/ui/breadcrumbs.html">Breadcrumbs</a>
+                                <a href="<?= base_url('pages/ui/breadcrumbs')?>">Breadcrumbs</a>
                             </li>
                             <li>
-                                <a href="pages/ui/buttons.html">Buttons</a>
+                                <a href="<?= base_url('pages/ui/buttons')?>">Buttons</a>
                             </li>
                             <li>
-                                <a href="pages/ui/collapse.html">Collapse</a>
+                                <a href="<?= base_url('pages/ui/collapse')?>">Collapse</a>
                             </li>
                             <li>
-                                <a href="pages/ui/colors.html">Colors</a>
+                                <a href="<?= base_url('pages/ui/colors')?>">Colors</a>
                             </li>
                             <li>
-                                <a href="pages/ui/dialogs.html">Dialogs</a>
+                                <a href="<?= base_url('pages/ui/dialogs')?>">Dialogs</a>
                             </li>
                             <li>
-                                <a href="pages/ui/icons.html">Icons</a>
+                                <a href="<?= base_url('pages/ui/icons')?>">Icons</a>
                             </li>
                             <li>
-                                <a href="pages/ui/labels.html">Labels</a>
+                                <a href="<?= base_url('pages/ui/labels')?>">Labels</a>
                             </li>
                             <li>
-                                <a href="pages/ui/list-group.html">List Group</a>
+                                <a href="<?= base_url('pages/ui/list-group')?>">List Group</a>
                             </li>
                             <li>
-                                <a href="pages/ui/media-object.html">Media Object</a>
+                                <a href="<?= base_url('pages/ui/media-object')?>">Media Object</a>
                             </li>
                             <li>
-                                <a href="pages/ui/modals.html">Modals</a>
+                                <a href="<?= base_url('pages/ui/modals')?>">Modals</a>
                             </li>
                             <li>
-                                <a href="pages/ui/notifications.html">Notifications</a>
+                                <a href="<?= base_url('pages/ui/notifications')?>">Notifications</a>
                             </li>
                             <li>
-                                <a href="pages/ui/pagination.html">Pagination</a>
+                                <a href="<?= base_url('pages/ui/pagination')?>">Pagination</a>
                             </li>
                             <li>
-                                <a href="pages/ui/preloaders.html">Preloaders</a>
+                                <a href="<?= base_url('pages/ui/preloaders')?>">Preloaders</a>
                             </li>
                             <li>
-                                <a href="pages/ui/progressbars.html">Progress Bars</a>
+                                <a href="<?= base_url('pages/ui/progressbars')?>">Progress Bars</a>
                             </li>
                             <li>
-                                <a href="pages/ui/range-sliders.html">Range Sliders</a>
+                                <a href="<?= base_url('pages/ui/range-sliders')?>">Range Sliders</a>
                             </li>
                             <li>
-                                <a href="pages/ui/sortable-nestable.html">Sortable & Nestable</a>
+                                <a href="<?= base_url('pages/ui/sortable-nestable')?>">Sortable & Nestable</a>
                             </li>
                             <li>
-                                <a href="pages/ui/tabs.html">Tabs</a>
+                                <a href="<?= base_url('pages/ui/tabs')?>">Tabs</a>
                             </li>
                             <li>
-                                <a href="pages/ui/thumbnails.html">Thumbnails</a>
+                                <a href="<?= base_url('pages/ui/thumbnails')?>">Thumbnails</a>
                             </li>
                             <li>
-                                <a href="pages/ui/tooltips-popovers.html">Tooltips & Popovers</a>
+                                <a href="<?= base_url('pages/ui/tooltips-popovers')?>">Tooltips & Popovers</a>
                             </li>
                             <li>
-                                <a href="pages/ui/waves.html">Waves</a>
+                                <a href="<?= base_url('pages/ui/waves')?>">Waves</a>
                             </li>
                         </ul>
                     </li>
