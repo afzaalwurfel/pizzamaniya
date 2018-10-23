@@ -24,6 +24,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/HRT_web/';
+//$config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
+// echo $_SERVER['HTTP_HOST'];
+// exit();
+//$config['base_url'] = 'http://example.com/HRT_web/';
 
 /*
 |--------------------------------------------------------------------------

@@ -74,12 +74,54 @@ class HRT_web_controller extends CI_Controller {
            //$this->session->sess_destroy(); 
            session_destroy();
            redirect(base_url() . 'HRT_web_controller/index');  
-      }  
+      } 
+
+
+
+      function insertNewPage()
+      {
+      	$value = array(
+      		'Title'    		=> $this->input->post('page_title'),
+      		'Type'    		=> $this->input->post('page_Type') ,
+      		'Status'  		=> $this->input->post('page_status'),
+      		'Description'   => $this->input->post('textarea_name')
+
+      	);
+      	$this->Main_model->insertNewPage($value);
+      	redirect('HRT_web_controller/page_listing');
+      }
+
+
+      public function delete_page($id)
+      {
+      	$this->Main_model->delete_page($id);
+      	redirect('HRT_web_controller/page_listing');
+      }
+
+
+      function   edit_page($id)
+      {
+      	$recod['user'] = $this->Main_model->edit_page($id);
+      	print_r($recod);
+      	exit();
+
+      }
 
 
 	public function loged_in()
 	{	
+			$this->load->library('ckeditor');
+			$this->load->library('ckfinder');
+				$this->ckeditor->basePath = base_url().'assets/ckeditor/';
+				$this->ckeditor->config['toolbar'] = array(
+				array( 'Source', '-', 'Bold', 'Italic', 'Underline', '-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo','-','NumberedList','BulletedList' )
+				);
+				$this->ckeditor->config['language'] = 'english';
+				// $this->ckeditor->config['width'] = '730px';
+				// $this->ckeditor->config['height'] = '300px';            
 
+				//Add Ckfinder to Ckeditor
+				$this->ckfinder->SetupCKEditor($this->ckeditor,'../../assets/ckfinder/'); 
 		 // $var="Afzaal Iqbal";
 		 // $count = strlen($var);
 		 // $capitalphabets = array('Z','Y','X','W','V','U','T','S','R','Q','P','O','N','M','L','K','J','I','H','G','F','E','D','C','B','A','z','y','x','w','v','u','t','s','r','q','p','o','n','m','l','k','j','i','h','g','f','e','d','c','b','a','9','8','7','6','5','4','3','2','1','0');
@@ -112,11 +154,11 @@ class HRT_web_controller extends CI_Controller {
 	}
 
 
-	function pages_typography()
+	function page_listing()
 	{
-		$this->load->view('pages/typography');
+		$value['user'] = $this->Main_model->pages_data();
+		$this->load->view('pages/page_listing',$value);
 	}
-
 
 
 

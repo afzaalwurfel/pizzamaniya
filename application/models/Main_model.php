@@ -45,4 +45,36 @@
               return $query->result();
 
       }  
+
+
+      public function pages_data()
+      {
+        $query = $this->db->select('*')
+        ->from('page_details')
+        ->get();
+        return $query->result();
+      }
+
+
+      public function insertNewPage($value)
+      {
+          $this->db->insert('page_details',$value);
+      }
+
+
+      function delete_page($id)
+      {
+            $this->db->where('page_id',$id);
+            $this->db->delete('page_details');
+      }
+
+
+      public function edit_page($id)
+      {
+          $query = $this->db->select('*')
+         ->from('page_details')
+         ->where('page_id',$id)
+         ->get();
+         return $query->result();
+      }
  }  

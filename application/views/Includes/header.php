@@ -26,6 +26,9 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="<?= base_url('assets/css/themes/all-themes.css')?>" rel="stylesheet" />
+    <!-- ckeditor plugins -->
+    <script type="text/javascript" src="<?= base_url('assets/ckeditor/ckeditor.js')?>"></script>
+<!--     <script type="text/javascript" src="<?= base_url('assets/ckfinder/ckfinder.js')?>"></script> -->
 </head>
     <body class="theme-red">
     <!-- Page Loader -->

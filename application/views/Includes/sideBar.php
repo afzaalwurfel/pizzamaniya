@@ -34,9 +34,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?= base_url('HRT_web_controller/pages_typography')?>">
-                            <i class="material-icons">text_fields</i>
-                            <span>Typography</span>
+                        <a href="<?= base_url('HRT_web_controller/page_listing')?>">
+                            <i class="material-icons">layers</i>
+                            <span>View pages</span>
                         </a>
                     </li>
                     <li>
@@ -363,14 +363,14 @@
             </div>
             <!-- #Menu -->
             <!-- Footer -->
-            <div class="legal">
+            <!-- <div class="legal">
                 <div class="copyright">
                     &copy; 2016 - 2017 <a href="javascript:void(0);">AdminBSB - Material Design</a>.
                 </div>
                 <div class="version">
                     <b>Version: </b> 1.0.5
                 </div>
-            </div>
+            </div> -->
             <!-- #Footer -->
         </aside>
         <!-- #END# Left Sidebar -->
