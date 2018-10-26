@@ -101,6 +101,7 @@ class HRT_web_controller extends CI_Controller {
 
       function   edit_page($id)
       {
+      	$this->load->view('Edit_page');
       	$recod['user'] = $this->Main_model->edit_page($id);
       	print_r($recod);
       	exit();

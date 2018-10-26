@@ -58,14 +58,13 @@
         <script type="text/javascript">
                 function myFunction() 
                 {
-                    var r = confirm("Are you sure you want to delete this page")
+                    var r = confirm("Are you sure you want to delete this page");
                     if (r == true)
                     return true;
                     else
                     return false;
                     }
         </script>
-     
     </section>
    <?php $this->load->view('Includes/footer');?>
 </body>
