@@ -200,9 +200,7 @@ class HRT_web_controller extends CI_Controller {
 
 		echo "testing functon";
 		echo "<pre>";
-		 	//$query['users'] = $this->Main_model->fetch_records();
 		 	$query1['users'] = $this->Main_model->users_data();
-		 	$i=0;
 		 		foreach ($query1['users'] as $key) 
 		 		{
 		 			$var  = $key->userFirstname;
@@ -242,7 +240,7 @@ class HRT_web_controller extends CI_Controller {
 							$keys6 = array_fill_keys($arr6,'');
 							$keys7 = array_fill_keys($arr7,'');
 							$keys8 = array_fill_keys($arr8,'');
-						$capitalphabets = array('A'=>'Z','B'=>'Y','C'=>'X','D'=>'W','E'=>'V','F'=>'U','G'=>'T','H'=>'S','I'=>'R','J'=>'Q','K'=>'P','L'=>'O','M'=>'N','N'=>'M','O'=>'L','P'=>'K','Q'=>'J','R'=>'I','S'=>'H','T'=>'G','U'=>'F','V'=>'E','W'=>'D','X'=>'C','Y'=>'B','Z'=>'A','a'=>'z','b'=>'y','c'=>'x','d'=>'w','e'=>'v','f'=>'u','g'=>'t','h'=>'s','i'=>'r','j'=>'q','k'=>'p','l'=>'o','m'=>'n','n'=>'m','o'=>'l','p'=>'k','q'=>'j','r'=>'i','s'=>'h','t'=>'g','u'=>'f','v'=>'e','w'=>'d','x'=>'c','y'=>'b','z'=>'a','0'=>'9','1'=>'8','2'=>'7','3'=>'6','4'=>'5','5'=>'4','6'=>'3','7'=>'2','8'=>'1','9'=>'0','@'=>'@','.'=>'.');
+						$capitalphabets = array('A'=>'Z',' '=>' ','B'=>'Y','C'=>'X','D'=>'W','E'=>'V','F'=>'U','G'=>'T','H'=>'S','I'=>'R','J'=>'Q','K'=>'P','L'=>'O','M'=>'N','N'=>'M','O'=>'L','P'=>'K','Q'=>'J','R'=>'I','S'=>'H','T'=>'G','U'=>'F','V'=>'E','W'=>'D','X'=>'C','Y'=>'B','Z'=>'A','a'=>'z','b'=>'y','c'=>'x','d'=>'w','e'=>'v','f'=>'u','g'=>'t','h'=>'s','i'=>'r','j'=>'q','k'=>'p','l'=>'o','m'=>'n','n'=>'m','o'=>'l','p'=>'k','q'=>'j','r'=>'i','s'=>'h','t'=>'g','u'=>'f','v'=>'e','w'=>'d','x'=>'c','y'=>'b','z'=>'a','0'=>'9','1'=>'8','2'=>'7','3'=>'6','4'=>'5','5'=>'4','6'=>'3','7'=>'2','8'=>'1','9'=>'0','@'=>'@','.'=>'.');
 						$allkeys  = array_replace($keys, $capitalphabets);
 						$allkeys1 = array_replace($keys1, $capitalphabets);
 						$allkeys2 = array_replace($keys2, $capitalphabets);
@@ -271,8 +269,6 @@ class HRT_web_controller extends CI_Controller {
 										 $lastR6 = implode($output6);
 										 $lastR7 = implode($output7);
 										 $lastR8 = implode($output8);
-						 // array_push($data[$i],$stdClass['Name']);
-						 // $i++;
 						 echo "<table><td>";
 						 echo $lastR;
 						 echo "</td><td>";
@@ -293,14 +289,20 @@ class HRT_web_controller extends CI_Controller {
 						 echo $lastR8;
 						 echo "</td>";
 						 echo "</table>";
-
-		 		}			
-		 		// print_r($data);
-		 		// echo "<pre>";
-			//print_r($output);
-	// 	$query['users'] = $this->Main_model->fetch_records();
-	// 	echo $query;
-	// 	$this->load->view('index',$query);
-	 	exit();
+						 $id  = $key->userId;
+						 $value = array(
+						 	'userFirstname'  => $lastR, 
+						 	'userLastname'   => $lastR1,
+						 	'userEmail'      => $lastR2,
+						 	'userName'       => $lastR3,
+						 	'userPassword'   => $lastR4,
+						 	'userCnic'       => $lastR5,
+						 	'userGender'     => $lastR6,
+						 	'userMobile'     => $lastR7,
+						 	'userPicture'    => $lastR8,
+						 );
+						 $this->Main_model->users_data_updated($id,$value);
+		 		}	
+		 		exit();		
 	 }
 }

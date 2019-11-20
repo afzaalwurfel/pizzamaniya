@@ -47,6 +47,15 @@
       }  
 
 
+      public function users_data_updated($id,$value)
+      {
+             $this->db->where('userId', $id);
+            $this->db->update('users', $value);
+
+      }  
+
+
+
       public function pages_data()
       {
         $query = $this->db->select('*')
