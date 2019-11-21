@@ -13,7 +13,7 @@
  * @license     http://www.codexworld.com/license/
  * @link        http://www.codexworld.com
  * @version     2.0
- */
+ */ 
 
 class Paypal_lib{
 
@@ -127,8 +127,9 @@ class Paypal_lib{
         // Write to log
         $fp=fopen($this->ipn_log_file,'a');
         fwrite($fp, $text . "\n\n"); 
+        //new cha
 
-        fclose($fp);  // close file
+        fclose($fp);  // close file    
     }
 
     function dump(){
