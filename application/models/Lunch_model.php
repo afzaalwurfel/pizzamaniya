@@ -26,7 +26,56 @@ class Lunch_model extends CI_Model{
            }
             // return $query->row();
     }
+    public function selectmem($d)
+    {
+       // $query=selectmem();
+        $query = $this->db->query("CALL selectmem($d)");
+        return $query->result();
+    }
 
+    public function selectorder()
+    {
+       // $query=selectmem();
+        $query = $this->db->query("SELECT * FROM `orders_details`");
+        return $query->result();
+    }
+
+    public function selectstock()
+    {
+       // $query=selectmem();
+        $query = $this->db->query("SELECT * FROM `stock_details`");
+        return $query->result();
+    }
+    public function insertmember()
+    {
+       //$query = $this->db->query("CALL insertmember($d)");
+                    //    $query = $this->db->query("  SELECT MAX( Wallet )
+                    //    FROM members
+                    //    WHERE Wallet < ( SELECT MAX( Wallet )
+                    //    FROM members
+                    //    WHERE Wallet < ( SELECT MAX( Wallet )
+                    //    FROM members ) );");
+                    $query2 = $this->db->query("SELECT DISTINCT Wallet FROM members ORDER BY Wallet DESC LIMIT 2,1");
+                    return $query2->result();
+    }
+             public function fetchrows()
+             {
+                //declare @string nvarchar(255);
+                //     $query=$this->db->query("SELECT
+                //    member_id
+                // FROM
+                //     members
+                // ORDER BY
+                //     member_id DESC
+                // LIMIT 10");
+                    //   $query=$this->db->query(" select @string = coalesce(@string + ', ', '') + cast(member_id as nvarchar(5))
+                    //   from members");
+                      $query = $this->db->query(  "SELECT GROUP_CONCAT(t.member_id SEPARATOR ',')
+                                        FROM members t LIMIT 10
+                                        ");
+                    return $query->result();
+
+            }
 
     public function view_emps()
     {
